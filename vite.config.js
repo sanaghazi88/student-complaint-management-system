@@ -8,13 +8,23 @@
 
 
 
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+// import tailwindcss from '@tailwindcss/vite'
+
+// export default defineConfig({
+//   plugins: [
+//     react(),
+//     tailwindcss(),
+//   ],
+// })
+
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  base: '/student-complaint-management-system/',
+  plugins: [react(), tailwindcss()],
 })
