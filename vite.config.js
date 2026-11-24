@@ -20,11 +20,21 @@
 // })
 
 
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+// import tailwindcss from '@tailwindcss/vite'
+
+// export default defineConfig({
+//   base: '/student-complaint-management-system/',
+//   plugins: [react(), tailwindcss()],
+// })
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/student-complaint-management-system/',
+  base: process.env.GITHUB_ACTIONS
+    ? '/student-complaint-management-system/'
+    : '/',
   plugins: [react(), tailwindcss()],
 })
